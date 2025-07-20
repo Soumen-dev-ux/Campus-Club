@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Campus Clubs Hub - Events</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="events.css">
+    <link rel="stylesheet" href="dark-mode.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <header class="nav-gradient">
+        <div class="container nav-container">
+            <div class="nav-left">
+                <a href="index.html" class="logo">
+                    <i class="fas fa-users"></i>
+                    <span>Campus Clubs</span>
+                </a>
+                <nav class="nav-menu">
+                    <a href="index.html" class="nav-item">
+                        <i class="fas fa-home"></i>
+                        <span>Dashboard</span>
+                    </a>
+                    <a href="events.html" class="nav-item active">
+                        <i class="fas fa-calendar"></i>
+                        <span>Events</span>
+                    </a>
+                    <a href="profile.html" class="nav-item">
+                        <i class="fas fa-user"></i>
+                        <span>Profile</span>
+                    </a>
+                </nav>
+            </div>
+            <div class="nav-right">
+                <button class="notification-btn">
+                    <i class="fas fa-bell"></i>
+                    <span class="notification-badge">3</span>
+                </button>
+                <button class="theme-toggle" id="themeToggle">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <div class="profile-dropdown">
+                    <button class="profile-btn">
+                        <img src="https://i.postimg.cc/Nj2ygpVY/32ae3f70-4b7a-4458-8cf3-26ffa0acfdbc.png" alt="Profile" class="profile-avatar">
+                    </button>
+                    <div class="dropdown-menu">
+                        <div class="dropdown-header">
+                            <p class="user-name">Soumen Pore</p>
+                            <p class="user-email">soumen.pore@university.edu</p>
+                        </div>
+                        <a href="profile.html" class="dropdown-item">
+                            <i class="fas fa-user"></i>
+                            Profile
+                        </a>
+                        <a href="#" class="dropdown-item">
+                            <i class="fas fa-cog"></i>
+                            Settings
+                        </a>
+                        <a href="#" class="dropdown-item">
+                            <i class="fas fa-sign-out-alt"></i>
+                            Log out
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="shape-decoration shape-1"></div>
+        <div class="shape-decoration shape-2"></div>
+        <div class="shape-decoration shape-3"></div>
+        <div class="container">
+            <!-- Header -->
+            <section class="events-header">
+                <h1>Campus Events</h1>
+                <p>Discover and join exciting events happening across all campus clubs</p>
+            </section>
+
+            <!-- Search and Filters -->
+            <section class="search-filters glass-card">
+                <div class="search-container">
+                    <div class="search-input-wrapper">
+                        <i class="fas fa-search search-icon"></i>
+                        <input type="text" id="searchInput" placeholder="Search events, clubs, or keywords..." class="search-input">
+                    </div>
+                    <div class="filter-container">
+                        <i class="fas fa-filter filter-icon"></i>
+                        <select id="categoryFilter" class="category-select">
+                            <option value="all">All Categories</option>
+                            <option value="academic">Academic</option>
+                            <option value="social">Social</option>
+                            <option value="sports">Sports</option>
+                            <option value="arts">Arts & Culture</option>
+                            <option value="volunteer">Volunteer</option>
+                            <option value="professional">Professional</option>
+                        </select>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Events Tabs -->
+            <section class="events-tabs">
+                <div class="tabs-header">
+                    <button class="tab-btn active" data-tab="upcoming">Upcoming Events</button>
+                    <button class="tab-btn" data-tab="past">Past Events</button>
+                </div>
+
+                <!-- Upcoming Events Tab -->
+                <div class="tab-content active" id="upcoming-tab">
+                    <div class="events-grid" id="eventsGrid">
+                        <!-- Event Card 1 -->
+                        <div class="event-card" data-category="academic">
+                            <div class="event-image-container">
+                                <img src="https://images.unsplash.com/photo-1576153192396-180ecef2a715?w=300" alt="Annual Science Fair" class="event-image">
+                                <div class="event-actions">
+                                    <button class="action-btn favorited">
+                                        <i class="fas fa-heart"></i>
+                                    </button>
+                                    <button class="action-btn">
+                                        <i class="fas fa-share"></i>
+                                    </button>
+                                </div>
+                                <span class="event-category">Academic</span>
+                            </div>
+                            <div class="event-content">
+                                <div class="event-club">
+                                    <img src="https://i.pravatar.cc/24?img=1" alt="Science Club" class="club-avatar-small">
+                                    <span>Science Club</span>
+                                </div>
+                                <h3 class="event-title">Annual Science Fair</h3>
+                                <p class="event-description">Showcase of innovative student research projects and experiments from across all science departments.</p>
+                                <div class="event-details">
+                                    <div class="event-detail">
+                                        <i class="fas fa-calendar"></i>
+                                        <span>March 15, 2024</span>
+                                    </div>
+                                    <div class="event-detail">
+                                        <i class="fas fa-clock"></i>
+                                        <span>10:00 AM - 4:00 PM</span>
+                                    </div>
+                                    <div class="event-detail">
+                                        <i class="fas fa-map-marker-alt"></i>
+                                        <span>Main Auditorium</span>
+                                    </div>
+                                    <div class="event-detail">
+                                        <i class="fas fa-users"></i>
+                                        <span>245/300 attending</span>
+                                    </div>
+                                </div>
+                                <div class="event-tags">
+                                    <span class="tag">Research</span>
+                                    <span class="tag">Innovation</span>
+                                    <span class="tag">Competition</span>
+                                </div>
+                                <div class="event-footer">
+                                    <button class="btn-primary event-register">Register</button>
+                                    <button class="btn-outline event-details-btn">
+                                        <i class="fas fa-external-link-alt"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Event Card 2 -->
+                        <div class="event-card" data-category="social">
+                            <div class="event-image-container">
+                                <img src="https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?w=300" alt="Cultural Night" class="event-image">
+                                <div class="event-actions">
+                                    <button class="action-btn">
+                                        <i class="fas fa-heart"></i>
+                                    </button>
+                                    <button class="action-btn">
+                                        <i class="fas fa-share"></i>
+                                    </button>
+                                </div>
+                                <span class="event-category">Social</span>
+                            </div>
+                            <div class="event-content">
+                                <div class="event-club">
+                                    <img src="https://i.pravatar.cc/24?img=2" alt="International Students" class="club-avatar-small">
+                                    <span>International Students Association</span>
+                                </div>
+                                <h3 class="event-title">Cultural Night: Around the World</h3>
+                                <p class="event-description">Experience diverse cultures through food, music, dance, and traditional performances from international students.</p>
+                                <div class="event-details">
+                                    <div class="event-detail">
+                                        <i class="fas fa-calendar"></i>
+                                        <span>March 18, 2024</span>
+                                    </div>
+                                    <div class="event-detail">
+                                        <i class="fas fa-clock"></i>
+                                        <span>6:00 PM - 10:00 PM</span>
+                                    </div>
+                                    <div class="event-detail">
+                                        <i class="fas fa-map-marker-alt"></i>
+                                        <span>Student Center Ballroom</span>
+                                    </div>
+                                    <div class="event-detail">
+                                        <i class="fas fa-users"></i>
+                                        <span>189/250 attending</span>
+                                    </div>
+                                </div>
+                                <div class="event-tags">
+                                    <span class="tag">Culture</span>
+                                    <span class="tag">Food</span>
+                                    <span class="tag">Music</span>
+                                    <span class="tag">Dance</span>
+                                </div>
+                                <div class="event-footer">
+                                    <button class="btn-outline event-register registered">Registered</button>
+                                    <button class="btn-outline event-details-btn">
+                                        <i class="fas fa-external-link-alt"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Event Card 3 -->
+                        <div class="event-card" data-category="professional">
+                            <div class="event-image-container">
+                                <img src="https://images.unsplash.com/photo-1475721027785-f74eccf877e2?w=300" alt="Startup Pitch Competition" class="event-image">
+                                <div class="event-actions">
+                                    <button class="action-btn favorited">
+                                        <i class="fas fa-heart"></i>
+                                    </button>
+                                    <button class="action-btn">
+                                        <i class="fas fa-share"></i>
+                                    </button>
+                                </div>
+                                <span class="event-category">Professional</span>
+                            </div>
+                            <div class="event-content">
+                                <div class="event-club">
+                                    <img src="https://i.pravatar.cc/24?img=3" alt="Entrepreneurship Club" class="club-avatar-small">
+                                    <span>Entrepreneurship Club</span>
+                                </div>
+                                <h3 class="event-title">Startup Pitch Competition</h3>
+                                <p class="event-description">Student entrepreneurs present their business ideas to a panel of industry experts and investors.</p>
+                                <div class="event-details">
+                                    <div class="event-detail">
+                                        <i class="fas fa-calendar"></i>
+                                        <span>March 22, 2024</span>
+                                    </div>
+                                    <div class="event-detail">
+                                        <i class="fas fa-clock"></i>
+                                        <span>2:00 PM - 6:00 PM</span>
+                                    </div>
+                                    <div class="event-detail">
+                                        <i class="fas fa-map-marker-alt"></i>
+                                        <span>Business Building Auditorium</span>
+                                    </div>
+                                    <div class="event-detail">
+                                        <i class="fas fa-users"></i>
+                                        <span>156/200 attending</span>
+                                    </div>
+                                </div>
+                                <div class="event-tags">
+                                    <span class="tag">Entrepreneurship</span>
+                                    <span class="tag">Innovation</span>
+                                    <span class="tag">Networking</span>
+                                </div>
+                                <div class="event-footer">
+                                    <button class="btn-primary event-register">Register</button>
+                                    <button class="btn-outline event-details-btn">
+                                        <i class="fas fa-external-link-alt"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Event Card 4 -->
+                        <div class="event-card" data-category="arts">
+                            <div class="event-image-container">
+                                <img src="https://images.unsplash.com/photo-1554048612-b6a482bc67e5?w=300" alt="Photography Workshop" class="event-image">
+                                <div class="event-actions">
+                                    <button class="action-btn">
+                                        <i class="fas fa-heart"></i>
+                                    </button>
+                                    <button class="action-btn">
+                                        <i class="fas fa-share"></i>
+                                    </button>
+                                </div>
+                                <span class="event-category">Arts</span>
+                            </div>
+                            <div class="event-content">
+                                <div class="event-club">
+                                    <img src="https://i.pravatar.cc/24?img=4" alt="Photography Club" class="club-avatar-small">
+                                    <span>Photography Club</span>
+                                </div>
+                                <h3 class="event-title">Photography Workshop: Portrait Lighting</h3>
+                                <p class="event-description">Learn professional portrait lighting techniques with hands-on practice and expert guidance.</p>
+                                <div class="event-details">
+                                    <div class="event-detail">
+                                        <i class="fas fa-calendar"></i>
+                                        <span>March 20, 2024</span>
+                                    </div>
+                                    <div class="event-detail">
+                                        <i class="fas fa-clock"></i>
+                                        <span>1:00 PM - 4:00 PM</span>
+                                    </div>
+                                    <div class="event-detail">
+                                        <i class="fas fa-map-marker-alt"></i>
+                                        <span>Art Building Studio 3</span>
+                                    </div>
+                                    <div class="event-detail">
+                                        <i class="fas fa-users"></i>
+                                        <span>28/30 attending</span>
+                                    </div>
+                                </div>
+                                <div class="event-tags">
+                                    <span class="tag">Photography</span>
+                                    <span class="tag">Workshop</span>
+                                    <span class="tag">Skills</span>
+                                </div>
+                                <div class="event-footer">
+                                    <button class="btn-outline event-register registered">Registered</button>
+                                    <button class="btn-outline event-details-btn">
+                                        <i class="fas fa-external-link-alt"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Event Card 5 -->
+                        <div class="event-card" data-category="volunteer">
+                            <div class="event-image-container">
+                                <img src="https://images.unsplash.com/photo-1532996122724-e3c354a0b15b?w=300" alt="Campus Cleanup Drive" class="event-image">
+                                <div class="event-actions">
+                                    <button class="action-btn">
+                                        <i class="fas fa-heart"></i>
+                                    </button>
+                                    <button class="action-btn">
+                                        <i class="fas fa-share"></i>
+                                    </button>
+                                </div>
+                                <span class="event-category">Volunteer</span>
+                            </div>
+                            <div class="event-content">
+                                <div class="event-club">
+                                    <img src="https://i.pravatar.cc/24?img=5" alt="Environmental Action" class="club-avatar-small">
+                                    <span>Environmental Action</span>
+                                </div>
+                                <h3 class="event-title">Campus Cleanup Drive</h3>
+                                <p class="event-description">Join us in making our campus more beautiful and sustainable through community service.</p>
+                                <div class="event-details">
+                                    <div class="event-detail">
+                                        <i class="fas fa-calendar"></i>
+                                        <span>March 16, 2024</span>
+                                    </div>
+                                    <div class="event-detail">
+                                        <i class="fas fa-clock"></i>
+                                        <span>9:00 AM - 12:00 PM</span>
+                                    </div>
+                                    <div class="event-detail">
+                                        <i class="fas fa-map-marker-alt"></i>
+                                        <span>Campus Quad</span>
+                                    </div>
+                                    <div class="event-detail">
+                                        <i class="fas fa-users"></i>
+                                        <span>67/100 attending</span>
+                                    </div>
+                                </div>
+                                <div class="event-tags">
+                                    <span class="tag">Environment</span>
+                                    <span class="tag">Volunteer</span>
+                                    <span class="tag">Community</span>
+                                </div>
+                                <div class="event-footer">
+                                    <button class="btn-primary event-register">Register</button>
+                                    <button class="btn-outline event-details-btn">
+                                        <i class="fas fa-external-link-alt"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Event Card 6 -->
+                        <div class="event-card" data-category="sports">
+                            <div class="event-image-container">
+                                <img src="https://images.unsplash.com/photo-1546519638-68e109498ffc?w=300" alt="Basketball Tournament" class="event-image">
+                                <div class="event-actions">
+                                    <button class="action-btn favorited">
+                                        <i class="fas fa-heart"></i>
+                                    </button>
+                                    <button class="action-btn">
+                                        <i class="fas fa-share"></i>
+                                    </button>
+                                </div>
+                                <span class="event-category">Sports</span>
+                            </div>
+                            <div class="event-content">
+                                <div class="event-club">
+                                    <img src="https://i.pravatar.cc/24?img=6" alt="Sports Club" class="club-avatar-small">
+                                    <span>Sports Club</span>
+                                </div>
+                                <h3 class="event-title">Intramural Basketball Tournament</h3>
+                                <p class="event-description">Compete in our annual basketball tournament with teams from different clubs and departments.</p>
+                                <div class="event-details">
+                                    <div class="event-detail">
+                                        <i class="fas fa-calendar"></i>
+                                        <span>March 25, 2024</span>
+                                    </div>
+                                    <div class="event-detail">
+                                        <i class="fas fa-clock"></i>
+                                        <span>5:00 PM - 9:00 PM</span>
+                                    </div>
+                                    <div class="event-detail">
+                                        <i class="fas fa-map-marker-alt"></i>
+                                        <span>Recreation Center Gym</span>
+                                    </div>
+                                    <div class="event-detail">
+                                        <i class="fas fa-users"></i>
+                                        <span>89/120 attending</span>
+                                    </div>
+                                </div>
+                                <div class="event-tags">
+                                    <span class="tag">Sports</span>
+                                    <span class="tag">Competition</span>
+                                    <span class="tag">Team Building</span>
+                                </div>
+                                <div class="event-footer">
+                                    <button class="btn-primary event-register">Register</button>
+                                    <button class="btn-outline event-details-btn">
+                                        <i class="fas fa-external-link-alt"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- No Results Message -->
+                    <div class="no-results" id="noResults" style="display: none;">
+                        <div class="no-results-content">
+                            <i class="fas fa-search"></i>
+                            <p>No events found matching your criteria.</p>
+                            <button class="btn-outline" onclick="clearFilters()">Clear Filters</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Past Events Tab -->
+                <div class="tab-content" id="past-tab">
+                    <div class="events-grid">
+                        <!-- Past Event Card 1 -->
+                        <div class="past-event-card">
+                            <img src="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?w=300" alt="Winter Formal Dance" class="past-event-image">
+                            <div class="past-event-content">
+                                <h3 class="past-event-title">Winter Formal Dance</h3>
+                                <div class="past-event-meta">
+                                    <span>Student Government</span>
+                                    <span>February 14, 2024</span>
+                                </div>
+                                <div class="past-event-stats">
+                                    <div class="past-event-stat">
+                                        <i class="fas fa-users"></i>
+                                        <span>234 attended</span>
+                                    </div>
+                                    <div class="past-event-rating">
+                                        <i class="fas fa-star"></i>
+                                        <span>4.8</span>
+                                    </div>
+                                </div>
+                                <button class="btn-outline full-width">View Details</button>
+                            </div>
+                        </div>
+
+                        <!-- Past Event Card 2 -->
+                        <div class="past-event-card">
+                            <img src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=300" alt="Coding Bootcamp" class="past-event-image">
+                            <div class="past-event-content">
+                                <h3 class="past-event-title">Coding Bootcamp</h3>
+                                <div class="past-event-meta">
+                                    <span>Coding Club</span>
+                                    <span>February 10, 2024</span>
+                                </div>
+                                <div class="past-event-stats">
+                                    <div class="past-event-stat">
+                                        <i class="fas fa-users"></i>
+                                        <span>45 attended</span>
+                                    </div>
+                                    <div class="past-event-rating">
+                                        <i class="fas fa-star"></i>
+                                        <span>4.9</span>
+                                    </div>
+                                </div>
+                                <button class="btn-outline full-width">View Details</button>
+                            </div>
+                        </div>
+
+                        <!-- Past Event Card 3 -->
+                        <div class="past-event-card">
+                            <img src="https://images.unsplash.com/photo-1460661419201-fd4cecdf8a8b?w=300" alt="Art Exhibition Opening" class="past-event-image">
+                            <div class="past-event-content">
+                                <h3 class="past-event-title">Art Exhibition Opening</h3>
+                                <div class="past-event-meta">
+                                    <span>Art Society</span>
+                                    <span>February 8, 2024</span>
+                                </div>
+                                <div class="past-event-stats">
+                                    <div class="past-event-stat">
+                                        <i class="fas fa-users"></i>
+                                        <span>78 attended</span>
+                                    </div>
+                                    <div class="past-event-rating">
+                                        <i class="fas fa-star"></i>
+                                        <span>4.7</span>
+                                    </div>
+                                </div>
+                                <button class="btn-outline full-width">View Details</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+    <script src="events.js"></script>
+</body>
+</html>

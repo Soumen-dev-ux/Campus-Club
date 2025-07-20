@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Campus Clubs Hub - Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="dark-mode.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <header class="nav-gradient">
+        <div class="container nav-container">
+            <div class="nav-left">
+                <a href="index.html" class="logo">
+                    <i class="fas fa-users"></i>
+                    <span>Campus Clubs</span>
+                </a>
+                <nav class="nav-menu">
+                    <a href="index.html" class="nav-item active">
+                        <i class="fas fa-home"></i>
+                        <span>Dashboard</span>
+                    </a>
+                    <a href="events.html" class="nav-item">
+                        <i class="fas fa-calendar"></i>
+                        <span>Events</span>
+                    </a>
+                    <a href="profile.html" class="nav-item">
+                        <i class="fas fa-user"></i>
+                        <span>Profile</span>
+                    </a>
+                </nav>
+            </div>
+            <div class="nav-right">
+                <button class="notification-btn">
+                    <i class="fas fa-bell"></i>
+                    <span class="notification-badge">3</span>
+                </button>
+                <button class="theme-toggle" id="themeToggle">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <div class="profile-dropdown">
+                    <button class="profile-btn">
+                        <img src="https://i.postimg.cc/Nj2ygpVY/32ae3f70-4b7a-4458-8cf3-26ffa0acfdbc.png" alt="Profile" class="profile-avatar">
+                    </button>
+                    <div class="dropdown-menu">
+                        <div class="dropdown-header">
+                            <div class="profile-header">
+                                <img src="https://i.postimg.cc/Nj2ygpVY/32ae3f70-4b7a-4458-8cf3-26ffa0acfdbc.png" alt="Profile" class="profile-header-avatar">
+                                <div class="profile-info">
+                                    <p class="user-name">Soumen Pore</p>
+                                    <p class="user-email">soumen.pore@university.edu</p>
+                                    <span class="user-status">
+                                        <i class="fas fa-circle"></i> Online
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="dropdown-badges">
+                            <img src="https://images.unsplash.com/photo-1533174072545-7a4b6ad7a6c3?w=30&h=30&fit=crop" alt="Photography Badge" class="badge-icon" title="Photography Expert">
+                            <img src="https://images.unsplash.com/photo-1546514714-df0ccc50d7bf?w=30&h=30&fit=crop" alt="Leadership Badge" class="badge-icon" title="Club Leader">
+                            <img src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=30&h=30&fit=crop" alt="Tech Badge" class="badge-icon" title="Tech Enthusiast">
+                        </div>
+                        <a href="profile.html" class="dropdown-item">
+                            <i class="fas fa-user"></i>
+                            Profile
+                        </a>
+                        <a href="#" class="dropdown-item">
+                            <i class="fas fa-cog"></i>
+                            Settings
+                        </a>
+                        <a href="#" class="dropdown-item">
+                            <i class="fas fa-sign-out-alt"></i>
+                            Log out
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content floating-shapes">
+        <div class="container">
+            <!-- Welcome Section -->
+            <section class="welcome-section">
+                <h1>Welcome back, Soumen!</h1>
+                <p>Here's what's happening with your campus clubs today.</p>
+            </section>
+
+            <!-- Stats Grid -->
+            <section class="stats-grid">
+                <div class="stats-card">
+                    <div class="stats-header">
+                        <h3>Active Clubs</h3>
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <div class="stats-content">
+                        <div class="stats-value gradient-text">127</div>
+                        <p class="stats-description">Across all campuses</p>
+                        <div class="stats-trend">
+                            <i class="fas fa-trending-up"></i>
+                            <span>+12%</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="stats-card">
+                    <div class="stats-header">
+                        <h3>Upcoming Events</h3>
+                        <i class="fas fa-calendar"></i>
+                    </div>
+                    <div class="stats-content">
+                        <div class="stats-value gradient-text">34</div>
+                        <p class="stats-description">This week</p>
+                        <div class="stats-trend">
+                            <i class="fas fa-trending-up"></i>
+                            <span>+8%</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="stats-card">
+                    <div class="stats-header">
+                        <h3>Total Members</h3>
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <div class="stats-content">
+                        <div class="stats-value gradient-text">2,847</div>
+                        <p class="stats-description">Active participants</p>
+                        <div class="stats-trend">
+                            <i class="fas fa-trending-up"></i>
+                            <span>+23%</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="stats-card">
+                    <div class="stats-header">
+                        <h3>Achievements</h3>
+                        <i class="fas fa-trophy"></i>
+                    </div>
+                    <div class="stats-content">
+                        <div class="stats-value gradient-text">156</div>
+                        <p class="stats-description">Awards this semester</p>
+                        <div class="stats-trend">
+                            <i class="fas fa-trending-up"></i>
+                            <span>+15%</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Main Content Grid -->
+            <section class="content-grid">
+                <!-- Recent Activities -->
+                <div class="activities-section">
+                    <div class="card-gradient">
+                        <div class="card-header">
+                            <h2>Recent Activities</h2>
+                            <p>Latest updates from clubs you're following</p>
+                        </div>
+                        <div class="card-content">
+                            <div class="activity-item">
+                                <img src="https://images.unsplash.com/photo-1552168324-d612d77725e3?w=40" alt="Photography Club" class="activity-avatar">
+                                <div class="activity-content">
+                                    <div class="activity-header">
+                                        <span class="activity-title">Photo Walk Downtown</span>
+                                        <span class="activity-badge">Photography Club</span>
+                                    </div>
+                                    <div class="activity-meta">
+                                        <span><i class="fas fa-clock"></i> 2 hours ago</span>
+                                        <span><i class="fas fa-users"></i> 24 participants</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="activity-item">
+                                <img src="https://images.unsplash.com/photo-1577563908411-5077b6fa7a9f?w=40" alt="Debate Society" class="activity-avatar">
+                                <div class="activity-content">
+                                    <div class="activity-header">
+                                        <span class="activity-title">Weekly Practice Session</span>
+                                        <span class="activity-badge">Debate Society</span>
+                                    </div>
+                                    <div class="activity-meta">
+                                        <span><i class="fas fa-clock"></i> 4 hours ago</span>
+                                        <span><i class="fas fa-users"></i> 18 participants</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="activity-item">
+                                <img src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=40" alt="Coding Club" class="activity-avatar">
+                                <div class="activity-content">
+                                    <div class="activity-header">
+                                        <span class="activity-title">Hackathon Planning</span>
+                                        <span class="activity-badge">Coding Club</span>
+                                    </div>
+                                    <div class="activity-meta">
+                                        <span><i class="fas fa-clock"></i> 6 hours ago</span>
+                                        <span><i class="fas fa-users"></i> 32 participants</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="activity-item">
+                                <img src="https://images.unsplash.com/photo-1507676184212-d03ab07a01bf?w=40" alt="Drama Club" class="activity-avatar">
+                                <div class="activity-content">
+                                    <div class="activity-header">
+                                        <span class="activity-title">Rehearsal for Spring Play</span>
+                                        <span class="activity-badge">Drama Club</span>
+                                    </div>
+                                    <div class="activity-meta">
+                                        <span><i class="fas fa-clock"></i> 1 day ago</span>
+                                        <span><i class="fas fa-users"></i> 15 participants</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <button class="btn-outline full-width">
+                                View All Activities
+                                <i class="fas fa-arrow-right"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Upcoming Events -->
+                <div class="events-sidebar">
+                    <div class="card-gradient">
+                        <div class="card-header">
+                            <h2>Upcoming Events</h2>
+                            <p>Don't miss these exciting events</p>
+                        </div>
+                        <div class="card-content">
+                            <div class="event-item">
+                                <h4>Annual Science Fair</h4>
+                                <span class="event-badge">Science Club</span>
+                                <div class="event-details">
+                                    <div><i class="fas fa-calendar"></i> March 15 at 10:00 AM</div>
+                                    <div><i class="fas fa-map-marker-alt"></i> Main Auditorium</div>
+                                    <div><i class="fas fa-users"></i> 245 attending</div>
+                                </div>
+                            </div>
+
+                            <div class="event-item">
+                                <h4>Cultural Night</h4>
+                                <span class="event-badge">International Students</span>
+                                <div class="event-details">
+                                    <div><i class="fas fa-calendar"></i> March 18 at 6:00 PM</div>
+                                    <div><i class="fas fa-map-marker-alt"></i> Student Center</div>
+                                    <div><i class="fas fa-users"></i> 189 attending</div>
+                                </div>
+                            </div>
+
+                            <div class="event-item">
+                                <h4>Startup Pitch Competition</h4>
+                                <span class="event-badge">Entrepreneurship Club</span>
+                                <div class="event-details">
+                                    <div><i class="fas fa-calendar"></i> March 22 at 2:00 PM</div>
+                                    <div><i class="fas fa-map-marker-alt"></i> Business Building</div>
+                                    <div><i class="fas fa-users"></i> 156 attending</div>
+                                </div>
+                            </div>
+
+                            <button class="btn-outline full-width">
+                                View All Events
+                                <i class="fas fa-arrow-right"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Featured Clubs -->
+            <section class="featured-clubs">
+                <div class="card-gradient">
+                    <div class="card-header">
+                        <h2>Featured Clubs</h2>
+                        <p>Popular clubs you might be interested in joining</p>
+                    </div>
+                    <div class="card-content">
+                        <div class="clubs-grid">
+                            <div class="club-card glass-card">
+                                <div class="club-header">
+                                    <img src="https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?w=60" alt="Environmental Action" class="club-avatar">
+                                    <div class="club-info">
+                                        <h3>Environmental Action</h3>
+                                        <span class="club-category">Activism</span>
+                                    </div>
+                                </div>
+                                <p class="club-description">Making campus greener through sustainable initiatives</p>
+                                <div class="club-footer">
+                                    <div class="club-stats">
+                                        <span><i class="fas fa-users"></i> 89 members</span>
+                                        <span><i class="fas fa-star"></i> 4.8</span>
+                                    </div>
+                                    <button class="btn-primary">Join Club</button>
+                                </div>
+                            </div>
+
+                            <div class="club-card glass-card">
+                                <div class="club-header">
+                                    <img src="https://images.unsplash.com/photo-1511379938547-c1f69419868d?w=60" alt="Music Society" class="club-avatar">
+                                    <div class="club-info">
+                                        <h3>Music Society</h3>
+                                        <span class="club-category">Arts</span>
+                                    </div>
+                                </div>
+                                <p class="club-description">Bringing together musicians of all skill levels</p>
+                                <div class="club-footer">
+                                    <div class="club-stats">
+                                        <span><i class="fas fa-users"></i> 156 members</span>
+                                        <span><i class="fas fa-star"></i> 4.9</span>
+                                    </div>
+                                    <button class="btn-primary">Join Club</button>
+                                </div>
+                            </div>
+
+                            <div class="club-card glass-card">
+                                <div class="club-header">
+                                    <img src="https://images.unsplash.com/photo-1559136555-9303baea8ebd?w=60" alt="Entrepreneurship Club" class="club-avatar">
+                                    <div class="club-info">
+                                        <h3>Entrepreneurship Club</h3>
+                                        <span class="club-category">Business</span>
+                                    </div>
+                                </div>
+                                <p class="club-description">Building the next generation of business leaders</p>
+                                <div class="club-footer">
+                                    <div class="club-stats">
+                                        <span><i class="fas fa-users"></i> 203 members</span>
+                                        <span><i class="fas fa-star"></i> 4.7</span>
+                                    </div>
+                                    <button class="btn-primary">Join Club</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

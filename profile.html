@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Campus Clubs Hub - Profile</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="profile.css">
+    <link rel="stylesheet" href="dark-mode.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <header class="nav-gradient">
+        <div class="container nav-container">
+            <div class="nav-left">
+                <a href="index.html" class="logo">
+                    <i class="fas fa-users"></i>
+                    <span>Campus Clubs</span>
+                </a>
+                <nav class="nav-menu">
+                    <a href="index.html" class="nav-item">
+                        <i class="fas fa-home"></i>
+                        <span>Dashboard</span>
+                    </a>
+                    <a href="events.html" class="nav-item">
+                        <i class="fas fa-calendar"></i>
+                        <span>Events</span>
+                    </a>
+                    <a href="profile.html" class="nav-item active">
+                        <i class="fas fa-user"></i>
+                        <span>Profile</span>
+                    </a>
+                </nav>
+            </div>
+            <div class="nav-right">
+                <button class="notification-btn">
+                    <i class="fas fa-bell"></i>
+                    <span class="notification-badge">3</span>
+                </button>
+                <button class="theme-toggle" id="themeToggle">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <div class="profile-dropdown">
+                    <button class="profile-btn">
+                        <img src="https://i.postimg.cc/Nj2ygpVY/32ae3f70-4b7a-4458-8cf3-26ffa0acfdbc.png" alt="Profile" class="profile-avatar">
+                    </button>
+                    <div class="dropdown-menu">
+                        <div class="dropdown-header">
+                            <p class="user-name">John Doe</p>
+                            <p class="user-email">john.doe@university.edu</p>
+                        </div>
+                        <a href="profile.html" class="dropdown-item">
+                            <i class="fas fa-user"></i>
+                            Profile
+                        </a>
+                        <a href="#" class="dropdown-item">
+                            <i class="fas fa-cog"></i>
+                            Settings
+                        </a>
+                        <a href="#" class="dropdown-item">
+                            <i class="fas fa-sign-out-alt"></i>
+                            Log out
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="container">
+            <!-- Profile Header -->
+            <section class="profile-header">
+                <div class="profile-info">
+                    <div class="profile-left">
+                        <img src="https://i.postimg.cc/Nj2ygpVY/32ae3f70-4b7a-4458-8cf3-26ffa0acfdbc.png" alt="John Doe" class="profile-image">
+                        <div class="profile-details">
+                            <h1 class="gradient-text">John Doe</h1>
+                            <p class="profile-subtitle">Computer Science • Class of 2025</p>
+                            <p class="profile-email">john.doe@university.edu</p>
+                            <div class="profile-badges">
+                                <span class="achievement-badge">Active Member</span>
+                                <span class="glass-badge">Leadership Track</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="profile-actions">
+                        <button class="btn-outline">
+                            <i class="fas fa-edit"></i>
+                            Edit Profile
+                        </button>
+                        <button class="btn-outline">
+                            <i class="fas fa-cog"></i>
+                            Settings
+                        </button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Stats Cards -->
+            <section class="profile-stats">
+                <div class="stats-card">
+                    <i class="fas fa-users stats-icon"></i>
+                    <div class="stats-info">
+                        <div class="stats-value gradient-text">3</div>
+                        <div class="stats-label">Clubs Joined</div>
+                    </div>
+                </div>
+                <div class="stats-card">
+                    <i class="fas fa-calendar stats-icon"></i>
+                    <div class="stats-info">
+                        <div class="stats-value gradient-text">23</div>
+                        <div class="stats-label">Events Attended</div>
+                    </div>
+                </div>
+                <div class="stats-card">
+                    <i class="fas fa-trophy stats-icon"></i>
+                    <div class="stats-info">
+                        <div class="stats-value gradient-text">12</div>
+                        <div class="stats-label">Achievements</div>
+                    </div>
+                </div>
+                <div class="stats-card">
+                    <i class="fas fa-clock stats-icon"></i>
+                    <div class="stats-info">
+                        <div class="stats-value gradient-text">45</div>
+                        <div class="stats-label">Hours Volunteered</div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Profile Tabs -->
+            <section class="profile-tabs">
+                <div class="tabs-header">
+                    <button class="tab-btn active" data-tab="clubs">My Clubs</button>
+                    <button class="tab-btn" data-tab="achievements">Achievements</button>
+                    <button class="tab-btn" data-tab="activity">Activity</button>
+                </div>
+
+                <!-- My Clubs Tab -->
+                <div class="tab-content active" id="clubs-tab">
+                    <div class="card-gradient">
+                        <div class="card-header">
+                            <h2>Joined Clubs</h2>
+                            <p>Clubs you're currently a member of</p>
+                        </div>
+                        <div class="card-content">
+                            <div class="clubs-list">
+                                <div class="club-item">
+                                    <div class="club-item-header">
+                                        <div class="club-item-info">
+                                            <img src="https://images.unsplash.com/photo-1554048612-b6a482bc67e5?w=40" alt="Photography Club" class="club-item-avatar">
+                                            <div>
+                                                <h3>Photography Club</h3>
+                                                <p>Vice President</p>
+                                            </div>
+                                        </div>
+                                        <span class="status-badge active">Active</span>
+                                    </div>
+                                    <div class="club-item-details">
+                                        <div class="detail-row">
+                                            <span>Joined:</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="club-item">
+                                    <div class="club-item-header">
+                                        <div class="club-item-info">
+                                            <img src="https://images.unsplash.com/photo-1507676184212-d03ab07a01bf?w=40" alt="Drama Club" class="club-item-avatar">
+                                            <div>
+                                                <h3>Drama Club</h3>
+                                                <p>Member</p>
+                                            </div>
+                                        </div>
+                                        <span class="status-badge active">Active</span>
+                                    </div>
+                                    <div class="club-item-details">
+                                        <div class="detail-row">
+                                            <span>Joined:</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="club-item">
+                                    <div class="club-item-header">
+                                        <div class="club-item-info">
+                                            <img src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=40" alt="Coding Club" class="club-item-avatar">
+                                            <div>
+                                                <h3>Coding Club</h3>
+                                                <p>Treasurer</p>
+                                            </div>
+                                        </div>
+                                        <span class="status-badge active">Active</span>
+                                    </div>
+                                    <div class="club-item-details">
+                                        <div class="detail-row">
+                                            <span>Joined:</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Achievements Tab -->
+                <div class="tab-content" id="achievements-tab">
+                    <div class="card-gradient">
+                        <div class="card-header">
+                            <h2>Achievements & Awards</h2>
+                            <p>Recognition for your club participation and leadership</p>
+                        </div>
+                        <div class="card-content">
+                            <div class="achievements-list">
+                                <div class="achievement-item">
+                                    <div class="achievement-icon yellow">
+                                        <i class="fas fa-trophy"></i>
+                                    </div>
+                                    <div class="achievement-content">
+                                        <h3>Leadership Excellence</h3>
+                                        <p>Served as club officer for 6+ months</p>
+                                    </div>
+                                    <div class="achievement-date">Feb 2024</div>
+                                </div>
+
+                                <div class="achievement-item">
+                                    <div class="achievement-icon blue">
+                                        <i class="fas fa-calendar"></i>
+                                    </div>
+                                    <div class="achievement-content">
+                                        <h3>Event Organizer</h3>
+                                        <p>Successfully organized 5+ club events</p>
+                                    </div>
+                                    <div class="achievement-date">Jan 2024</div>
+                                </div>
+
+                                <div class="achievement-item">
+                                    <div class="achievement-icon green">
+                                        <i class="fas fa-award"></i>
+                                    </div>
+                                    <div class="achievement-content">
+                                        <h3>Community Champion</h3>
+                                        <p>Volunteered 40+ hours for campus initiatives</p>
+                                    </div>
+                                    <div class="achievement-date">Dec 2023</div>
+                                </div>
+
+                                <div class="achievement-item">
+                                    <div class="achievement-icon purple">
+                                        <i class="fas fa-chart-line"></i>
+                                    </div>
+                                    <div class="achievement-content">
+                                        <h3>Active Participant</h3>
+                                        <p>Attended 20+ club activities</p>
+                                    </div>
+                                    <div class="achievement-date">Nov 2023</div>
+                                </div>
+                            </div>
+
+                            <div class="progress-section">
+                                <h3>Progress Towards Next Achievement</h3>
+                                <div class="progress-item">
+                                    <div class="progress-header">
+                                        <span>Mentor Badge</span>
+                                        <span>7/10 mentoring sessions</span>
+                                    </div>
+                                    <div class="progress-bar">
+                                        <div class="progress-fill" style="width: 70%"></div>
+                                    </div>
+                                </div>
+                                <div class="progress-item">
+                                    <div class="progress-header">
+                                        <span>Event Master</span>
+                                        <span>8/15 events organized</span>
+                                    </div>
+                                    <div class="progress-bar">
+                                        <div class="progress-fill" style="width: 53%"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Activity Tab -->
+                <div class="tab-content" id="activity-tab">
+                    <div class="card-gradient">
+                        <div class="card-header">
+                            <h2>Recent Activity</h2>
+                            <p>Your latest club activities and participation</p>
+                        </div>
+                        <div class="card-content">
+                            <div class="activity-timeline">
+                                <div class="timeline-item">
+                                    <div class="timeline-icon">
+                                        <i class="fas fa-calendar"></i>
+                                    </div>
+                                    <div class="timeline-content">
+                                        <h4>Attended Photo Walk Downtown</h4>
+                                        <p>Photography Club</p>
+                                    </div>
+                                    <div class="timeline-date">2 days ago</div>
+                                </div>
+
+                                <div class="timeline-item">
+                                    <div class="timeline-icon">
+                                        <i class="fas fa-users"></i>
+                                    </div>
+                                    <div class="timeline-content">
+                                        <h4>Joined Environmental Action</h4>
+                                        <p>Environmental Action</p>
+                                    </div>
+                                    <div class="timeline-date">1 week ago</div>
+                                </div>
+
+                                <div class="timeline-item">
+                                    <div class="timeline-icon">
+                                        <i class="fas fa-trophy"></i>
+                                    </div>
+                                    <div class="timeline-content">
+                                        <h4>Won Best Speaker Award</h4>
+                                        <p>Debate Society</p>
+                                    </div>
+                                    <div class="timeline-date">2 weeks ago</div>
+                                </div>
+
+                                <div class="timeline-item">
+                                    <div class="timeline-icon">
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                    <div class="timeline-content">
+                                        <h4>Organized Workshop on Sustainability</h4>
+                                        <p>Environmental Action</p>
+                                    </div>
+                                    <div class="timeline-date">3 weeks ago</div>
+                                </div>
+                            </div>
+                            <button class="btn-outline full-width">Load More Activity</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+    <script src="profile.js"></script>
+</body>
+</html>
